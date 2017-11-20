@@ -48,5 +48,6 @@ class PicturesController < ApplicationController
     @picture = Picture.find(params[:id])
     @picture.destroy
     redirect_to "/pictures"
+  end
 
 end
