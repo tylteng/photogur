@@ -8,4 +8,11 @@ class PicturesController < ApplicationController
     @picture = Picture.find(params[:id])
   end
 
+  def create
+  end
+
+  def new
+    @picture = Picture.new
+  end
+
 end
