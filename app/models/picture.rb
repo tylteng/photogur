@@ -1,4 +1,7 @@
 class Picture < ApplicationRecord
+  validates :artist, :title, :url, presence: true
+  validates :title, length: {minimum: 3, maximum: 20}
+  validates :url, uniqueness: true, :format => URI::regexp(%w(http https))
 
   def self.newest_first
     Picture.order("created_at DESC")
