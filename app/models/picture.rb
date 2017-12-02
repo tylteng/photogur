@@ -1,4 +1,5 @@
 class Picture < ApplicationRecord
+  belongs_to :user
   validates :artist, :title, :url, presence: true
   validates :title, length: {minimum: 3, maximum: 20}
   validates :url, uniqueness: true, :format => URI::regexp(%w(http https))

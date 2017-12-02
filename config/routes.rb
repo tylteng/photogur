@@ -10,6 +10,6 @@ Rails.application.routes.draw do
 
 resources :pictures
 resources :users
-resource :session
+resource :session, only: [:new, :create, :destroy]
 
 end
